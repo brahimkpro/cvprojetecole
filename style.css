@@ -1,0 +1,323 @@
+/* Import de la police Raleway via @font-face */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCIPrE.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/raleway/v28/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4TbMPrQVIT9c0c-Oak6z.woff2') format('woff2');
+}
+
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Conteneur principal */
+.cv-container {
+    width: 1160px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== EN-TÊTE TURQUOISE ===== */
+.header {
+    background-color: #17abb3;
+    color: white;
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header-left {
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.header-right {
+    flex: 1;
+}
+
+.header h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-item .icon {
+    font-size: 1.2rem;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.contact-item a:hover {
+    opacity: 0.8;
+}
+
+/* ===== CONTENU PRINCIPAL ===== */
+.main-content {
+    display: flex;
+}
+
+/* ===== COLONNE DE GAUCHE (GRISE) ===== */
+.left-column {
+    width: 340px;
+    background-color: #e3e3e3;
+    padding: 3rem 2rem;
+    flex-shrink: 0;
+}
+
+.left-column section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    color: #17abb3;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Compétences avec étoiles */
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #17abb3;
+    font-size: 1.2rem;
+}
+
+.star.filled {
+    color: #17abb3;
+}
+
+/* Langues */
+.language-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.lang-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.lang-level {
+    color: #666;
+    text-align: right;
+}
+
+/* Qualités et centres d'intérêt */
+.qualities-list,
+.interests-list {
+    list-style: none;
+}
+
+.qualities-list li,
+.interests-list li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    color: #333;
+}
+
+.qualities-list li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    color: #17abb3;
+    font-size: 0.8rem;
+}
+
+.interests-list li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    color: #17abb3;
+    font-size: 0.8rem;
+}
+
+/* ===== COLONNE DE DROITE (BLANCHE) ===== */
+.right-column {
+    flex: 1;
+    padding: 3rem 3rem;
+    background-color: white;
+}
+
+.right-column section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title-right {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    color: #17abb3;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Texte de profil */
+.profile-text {
+    text-align: justify;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.profile-text:first-of-type {
+    text-indent: 2rem;
+}
+
+/* Éléments de timeline */
+.timeline-item {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    border-left: 4px solid transparent;
+}
+
+.timeline-item:hover {
+    background-color: #f5f5f5;
+    border-left-color: #17abb3;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.timeline-content h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.institution {
+    color: #666;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.timeline-date {
+    color: #17abb3;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ===== PIED DE PAGE ===== */
+.footer {
+    background-color: #17abb3;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+.update-date {
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.9;
+}
